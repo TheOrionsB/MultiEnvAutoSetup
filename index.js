@@ -1,16 +1,15 @@
-const express = require("express");
-const app = express();
+const app = require('./app');
 const PORT = process.env.PORT || 5050;
 
-const baseRouter = require('./src/routers/base.router.js');
+const main = () => {
+    try {
+        app.listen(PORT, () => {
+            console.log(`Server started and listening on: http://localhost:${PORT}`)
+        })
+    } catch (e) {
+        console.error(e);
+        process.exit();
+    }
+}
 
-app.get("/", (req, res) => {
-    res.status(200);
-    return res.json({success: true, msg: "I'm up!"});
-});
-
-app.use('/base', baseRouter);
-
-app.listen(PORT, () => {
-  console.log(`* Server listening on http://localhost:${PORT}`);
-});
+main();
