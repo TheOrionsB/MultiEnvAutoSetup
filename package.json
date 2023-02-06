@@ -1,6 +1,6 @@
 {
   "name": "mutlienvautosetup",
-  "version": "$",
+  "version": "0.0.1",
   "main": "index.js",
   "repository": "git@github.com:TheOrionsB/MultiEnvAutoSetup.git",
   "author": "Nathan <44578736+TheOrionsB@users.noreply.github.com>",
